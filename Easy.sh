@@ -9,9 +9,7 @@ Menus() {
 	echo "1. Install"
 	echo "2. Update"
 	echo "3. Exit"
-}
 #Fungsion Menu
-read_options(){
 	local choice
 	read -p "Enter choice [ 1 - 3] " choice
 	case $choice in
@@ -25,9 +23,7 @@ read_options(){
 Menu_Install(){
     echo "Coming Soon";
 #	apt update -y
-#    apt upgrade
-}
-
+#   apt upgrade
 ##language
 #apt install python -y
 #apt install python2 -y
@@ -49,9 +45,15 @@ Menu_Install(){
 ##testing tools
 #apt install nmap -y
 #apt install hydra -y
-
+}
+#Update Fungsion
 Update(){
     clear
 	apt update -y
     apt upgrade
 }
+
+while true
+do
+	Menus
+done

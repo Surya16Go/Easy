@@ -1,5 +1,5 @@
 # Easy
-Version 1.0
+Version 1.0.1
 ## How to Use
 ```
 pkg install git
