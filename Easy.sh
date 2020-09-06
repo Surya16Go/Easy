@@ -9,7 +9,7 @@ Menus() {
 	echo "1. Install"
 	echo "2. Update"
 	echo "3. Exit"
-#Fungsion Menu
+#Menu Fungsion
 	local choice
 	read -p "Enter choice [ 1 - 3] " choice
 	case $choice in
@@ -19,11 +19,21 @@ Menus() {
 		*) echo -e "${RED}Error...${STD}" && sleep 2
 	esac
 }
+#Pause Fungsion
+pause(){
+  read -p "Press [Enter] key to continue..." fackEnterKey
+}
+#Coming Soon Fungsion
+Coming_Soon(){
+    clear
+	echo "~~~~~~~~~~~~~~~~~~~~~"	
+	echo "     Coming Soon     "
+	echo "~~~~~~~~~~~~~~~~~~~~~"
+    pause
+}
 #Menu Install
 Menu_Install(){
-    echo "Coming Soon";
-#	apt update -y
-#   apt upgrade
+    Coming_Soon
 ##language
 #apt install python -y
 #apt install python2 -y
@@ -50,7 +60,7 @@ Menu_Install(){
 Update(){
     clear
 	apt update -y
-    apt upgrade
+    apt upgrade -y
 }
 
 while true
